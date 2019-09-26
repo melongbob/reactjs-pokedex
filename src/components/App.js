@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PokemonList from './PokemonList'
+import PokemonList from './PokemonList';
 import './styles/App.css';
 
 class App extends Component {
