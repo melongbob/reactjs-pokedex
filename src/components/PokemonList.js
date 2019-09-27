@@ -4,13 +4,18 @@ import PokemonCell from './PokemonCell';
 import { pokemonClasses } from '../pokemonClasses'
 import './styles/PokemonList.css';
 
-const cells = pokemonClasses.map(pokemonClass => 
-    <PokemonCell 
-        key={ pokemonClass.id }
-        pokemonClass={ pokemonClass } />)
+const PokemonList = ({ handleOnClick }) => {
+    const cells = pokemonClasses.map(pokemonClass => {
+        return(
+            <PokemonCell 
+                key={ pokemonClass.id }
+                pokemonClass={ pokemonClass }
+                handleOnClick={handleOnClick} 
+            />
+        );
+    });
 
-const PokemonList = () => {
-
+    
     return(
         <section className="pokemon-list">
             {cells}

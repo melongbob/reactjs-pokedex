@@ -2,9 +2,7 @@ import React from 'react';
 import './styles/PokemonCell.css';
 import sprites from '../assets/sprites.png'
 
-console.log(sprites);
-
-const PokemonCell = ({pokemonClass}) => {
+const PokemonCell = ({pokemonClass, handleOnClick}) => {
     const{ id, backgroundPosition } = pokemonClass;
     
     const style = {
@@ -12,7 +10,7 @@ const PokemonCell = ({pokemonClass}) => {
         backgroundPosition
     };
     
-    return <button style={style} className="pokemon-cell"></button>
+    return <button onClick={() => handleOnClick(id)} style={style} className="pokemon-cell"></button>
 };
 
 export default PokemonCell;
