@@ -35,6 +35,6 @@
     margin: 0 0 5px;
 }
 
-.data-char {
+.data-char, .weight{
     font-size: 10px;
 }
